@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MELVA Web Studio | İşletmeniz için modern web siteleri</title>
+<meta name="description" content="Küçük işletmeler için modern, hızlı ve mobil uyumlu web siteleri.">
+<link rel="icon" href="assets/favicon.png">
+<script>try{var t=localStorage.getItem("th")}catch(e){}document.documentElement.dataset.theme=t||(matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light")</script>
+<style>
+:root{color-scheme:light;--fill:#800020;--onfill:#FFF9F2;--fillh:#640019;--block:#800020;--arch:#E8D3B8;--hdbg:rgba(255,249,242,.94);--wine:#800020;--sand:#F3E6D5;--ivory:#FFF9F2;--rose:#D45060;--ink:#1a0a0e;--muted:#6f5a60;--line:#e3d3be;--serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif}
+*{box-sizing:border-box;margin:0;padding:0}
+[data-theme=dark]{color-scheme:dark;--ivory:#1b0a10;--sand:#2a1219;--ink:#FFF9F2;--muted:#c9b0b4;--line:#4a2a33;--wine:#E06A78;--fill:#D45060;--onfill:#fff;--fillh:#dc6b79;--block:#A8324A;--arch:#2a1219;--hdbg:rgba(27,10,16,.94)}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{font:16px/1.7 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--ivory);color:var(--ink)}
+a{color:inherit;text-decoration:none}ul,ol{list-style:none}
+:focus-visible{outline:3px solid var(--rose);outline-offset:3px}
+.w{max-width:1080px;margin:auto;padding:0 24px}
+section{padding:110px 0}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.14;letter-spacing:-.015em}
+h2{font-size:clamp(30px,4vw,44px);margin-bottom:16px;max-width:660px}
+h3{font-weight:600}
+.lead{color:var(--muted);font-size:18px;max-width:560px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 26px;border-radius:6px;font:700 15px system-ui,sans-serif;border:1.5px solid transparent;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.b1{background:var(--fill);color:var(--onfill)}.b1:hover{background:var(--fillh)}
+.b2{border-color:var(--wine);color:var(--wine)}.b2:hover{background:var(--fill);color:var(--onfill)}
+.bh{background:var(--rose);color:#fff}.bh:hover{background:#dc6b79}
+/* header */
+.hd{position:sticky;top:0;z-index:50;background:var(--hdbg);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nv{display:flex;align-items:center;justify-content:space-between;height:68px}
+.lg{display:flex;align-items:center;gap:10px;font:600 21px var(--serif)}
+.lg img{display:block;height:44px;width:auto}footer .lg img{height:40px}.lg .lgd{display:none}[data-theme=dark] .lg .lgl{display:none}[data-theme=dark] .lg .lgd{display:block}
+.lm{width:36px;height:36px;border-radius:8px;background:var(--fill);color:var(--onfill);display:grid;place-items:center;font-size:25px;line-height:1}
+.nv ul{display:flex;gap:28px;font-size:15px}
+.nv ul a:hover{color:var(--wine);text-decoration:underline;text-underline-offset:7px;text-decoration-color:var(--rose);text-decoration-thickness:2px}
+.bg{display:none;background:none;border:0;width:42px;height:42px;cursor:pointer}
+.bg i{display:block;height:2px;background:var(--wine);margin:6px 9px}
+/* hero */
+.hero{padding:90px 0 120px}
+.hg{display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:center}
+h1{font-size:clamp(38px,5.4vw,64px);margin-bottom:24px}
+.hero .lead{margin-bottom:34px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.mk{position:relative;animation:up .9s ease both}
+@keyframes up{from{opacity:0;transform:translateY(22px)}}
+.rt{display:flex;align-items:center;gap:6px}
+.tg{background:none;border:1px solid var(--line);border-radius:8px;width:40px;height:40px;display:grid;place-items:center;color:var(--ink);cursor:pointer}.tg:hover{border-color:var(--wine)}
+body{transition:background .3s,color .3s}
+.art{width:100%;height:auto;display:block;overflow:visible}
+.art .s{fill:var(--sand)}.art .c{fill:var(--ivory);stroke:var(--line)}.art .w{fill:var(--sand);stroke:var(--block);stroke-width:2}.art .ar{fill:var(--arch)}.art .bd{fill:var(--ivory);stroke:var(--block);stroke-width:2}.art .aw{fill:#FFF9F2}.art path.bk,.art .aw{stroke:var(--block);stroke-width:2}.art .bk{fill:var(--block)}.art .ro{fill:var(--rose)}.art .l{fill:var(--line)}
+.fl{animation:fl 6s ease-in-out infinite;filter:drop-shadow(0 12px 14px rgba(26,10,14,.14))}.f2{animation-delay:-2s}.f3{animation-delay:-4s}
+@keyframes fl{50%{transform:translateY(-7px)}}
+[data-theme=dark] .pk.hot .bh,[data-theme=dark] .ct .bh{background:#F3E6D5;color:#800020}
+.b3{border-color:#F3E6D5;color:#F3E6D5}.b3:hover{background:#F3E6D5;color:#800020}
+.ci a{text-decoration:underline;text-underline-offset:4px;text-decoration-color:rgba(243,230,213,.5)}.ci a:hover{text-decoration-color:#F3E6D5}
+dialog{border:1px solid var(--line);border-radius:12px;background:var(--ivory);color:var(--ink);width:calc(100% - 32px);max-width:640px;padding:0;margin:auto}
+dialog::backdrop{background:rgba(26,10,14,.6)}
+.dg{padding:32px 28px;max-height:84vh;overflow:auto;position:relative}.dg h2{font-size:28px}.dg .up{color:var(--muted);font-size:14px;margin-bottom:8px}
+.dg h3{font-size:18px;margin:22px 0 6px}.dg p{color:var(--muted)}.dg a{color:var(--wine);text-decoration:underline;text-underline-offset:3px}
+.x{position:absolute;top:14px;right:16px;background:none;border:0;font-size:28px;line-height:1;color:var(--ink);cursor:pointer}
+/* need */
+.need{background:var(--sand)}
+.nd{display:grid;grid-template-columns:repeat(3,1fr);margin-top:52px;border-top:1px solid var(--line)}
+.nd li{padding:32px 32px 0 0}.nd li+li{padding-left:32px;border-left:1px solid var(--line)}
+.nd h3{font-size:22px;margin-bottom:10px;color:var(--wine)}.nd p{color:var(--muted)}
+/* ruled lists */
+.ls{display:grid;grid-template-columns:1fr 1fr;gap:0 64px;margin-top:48px}
+.ls li{padding:22px 0;border-top:1px solid var(--line)}
+.ls h3{font-size:20px;margin-bottom:4px}.ls p{color:var(--muted)}
+/* packages */
+.pks{background:var(--sand)}
+.pg{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px;align-items:start}
+.pk{border:1px solid var(--line);border-radius:10px;padding:36px 30px;background:var(--ivory)}
+.pk h3{font-size:28px;font-weight:400;margin-bottom:8px}.pk>p{color:var(--muted);min-height:78px}
+.pr{font:400 19px var(--serif);margin:18px 0 20px;padding:14px 0;border-block:1px solid var(--line)}
+.pk .btn{width:100%;margin-bottom:22px}
+.pk li{padding:6px 0 6px 26px;position:relative;font-size:15px}
+.pk li:before{content:"";position:absolute;left:3px;top:15px;width:11px;height:6px;border-left:2px solid var(--wine);border-bottom:2px solid var(--wine);transform:rotate(-45deg)}
+.pk.hot{background:var(--block);color:#FFF9F2;border-color:var(--block);padding-block:44px}
+.pk.hot>p{color:#F3E6D5}.pk.hot .pr{border-color:rgba(255,249,242,.25)}.pk.hot li:before{border-color:#F3E6D5}
+.tag{display:inline-block;font:600 13px system-ui;background:#F3E6D5;color:#800020;border-radius:4px;padding:2px 12px;margin-bottom:12px}
+.note{margin-top:24px;color:var(--muted);font-size:15px}
+.ad{display:grid;grid-template-columns:repeat(3,1fr) 1.1fr;gap:18px;margin-top:20px}
+.ad li{padding:20px;border-radius:8px;border:1px solid var(--line);background:var(--ivory)}
+.ad h3{font-size:18px;margin-bottom:6px}.ad p{font-size:14px;color:var(--muted)}
+.ad .soon{border-style:dashed;background:transparent}
+.ad small{display:inline-block;font-weight:600;font-size:12px;background:var(--sand);color:var(--wine);border-radius:4px;padding:1px 10px;margin-bottom:8px}
+h3.sub{font-size:26px;font-weight:400;margin-top:72px}
+/* portfolio */
+.ch{display:flex;gap:8px;flex-wrap:wrap;margin:32px 0}
+.ch button{font:500 14px system-ui;padding:8px 18px;border-radius:6px;border:1px solid var(--line);background:none;color:var(--ink);cursor:pointer}
+.ch button[aria-pressed=true]{background:var(--fill);color:var(--onfill);border-color:var(--fill)}
+.pj{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
+.cd{background:var(--sand);border-radius:10px;overflow:hidden}
+.th{height:158px;padding:18px;display:flex;flex-direction:column;gap:8px;justify-content:flex-end;background:linear-gradient(135deg,var(--a),var(--b));position:relative}
+.th i{height:12px;width:56%;border-radius:3px;background:#FFF9F2}.th i+i{height:7px;width:76%;background:rgba(255,249,242,.55)}.th b{width:70px;height:22px;border-radius:5px;background:#F3E6D5}
+.th span{position:absolute;top:12px;right:12px;font:600 12px system-ui;background:rgba(26,10,14,.65);color:#FFF9F2;border-radius:4px;padding:2px 10px}
+.cb{padding:18px 20px 22px}.cb small{color:var(--muted)}.cb h3{font-size:19px;margin:2px 0 10px}
+.cb a{font-weight:600;font-size:14px;color:var(--wine);border-bottom:2px solid var(--rose)}
+.pn{margin-top:24px;color:var(--muted);font-size:14px}
+/* process */
+.st{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;margin-top:48px}
+.st li{border-top:2px solid var(--wine);padding-top:18px}
+.st b{display:block;font:400 34px var(--serif);color:var(--rose);margin-bottom:6px}
+/* about */
+.ab{display:grid;grid-template-columns:.8fr 1.2fr;gap:64px}
+.ab .ls{margin-top:0;gap:0 32px}
+/* faq */
+.fq{background:var(--sand)}
+details{border-top:1px solid var(--line);padding:22px 0;max-width:820px}details:last-of-type{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;font:400 21px var(--serif);list-style:none;display:flex;justify-content:space-between;gap:20px}
+summary::-webkit-details-marker{display:none}summary:after{content:"+";font:300 28px/1 system-ui;color:var(--wine)}
+details[open] summary:after{content:"\2212"}details p{margin-top:12px;color:var(--muted);max-width:700px}
+/* contact */
+.ct{background:var(--block);color:#FFF9F2;border-radius:16px;padding:60px;display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.ct h2{margin-bottom:12px}.ct .lead{color:#F3E6D5;margin-bottom:28px}
+.ci li{padding:16px 0;border-top:1px solid rgba(255,249,242,.25)}.ci small{display:block;color:#F3E6D5}
+footer{background:var(--sand);color:var(--muted);padding:44px 0 34px;margin-top:110px;font-size:15px}
+.fr{display:flex;justify-content:space-between;gap:28px;flex-wrap:wrap}
+.fr ul{display:flex;gap:22px;flex-wrap:wrap}.fr a:hover{color:var(--wine)}
+.cp{margin-top:28px;padding-top:20px;border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+@media(max-width:900px){
+ section{padding:72px 0}
+ .bg{display:block}.nv ul{display:none;position:absolute;top:68px;left:0;right:0;flex-direction:column;gap:0;background:var(--ivory);border-bottom:1px solid var(--line);padding:8px 24px 16px}
+ .nv ul a{display:block;padding:11px 0}.hd.open .nv ul{display:flex}
+ .hg,.ab,.ct{grid-template-columns:1fr}.mk{max-width:480px;margin-bottom:34px}
+ .nd,.pg,.st{grid-template-columns:1fr}.nd li+li{padding-left:0;border-left:0;border-top:1px solid var(--line);margin-top:28px}
+ .ls,.ab .ls{grid-template-columns:1fr}.ad{grid-template-columns:1fr 1fr}.pk>p{min-height:0}.pk.hot{padding-block:36px}
+ .ct{padding:36px 26px}
+}
+@media(max-width:520px){.ad{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body id="top">
+<header class="hd" id="hd"><div class="w nv">
+ <a class="lg" href="#top" aria-label="MELVA Web Studio ana sayfa"><img class="lgl" src="assets/logo-light.png" alt="MELVA Web Studio" width="193" height="44"><img class="lgd" src="assets/logo-dark.png" alt="MELVA Web Studio" width="193" height="44"></a>
+ <ul id="mn"><li><a href="#top">Ana Sayfa</a></li><li><a href="#hizmetler">Hizmetler</a></li><li><a href="#paketler">Paketler</a></li><li><a href="#portfoy">Portföy</a></li><li><a href="#hakkimizda">Hakkımızda</a></li><li><a href="#iletisim">İletişim</a></li></ul>
+ <div class="rt"><button class="tg" id="tg" aria-label="Koyu veya açık temaya geç"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 3.5a8.5 8.5 0 0 1 0 17z" fill="currentColor"/></svg></button>
+ <button class="bg" id="bg" aria-label="Menüyü aç" aria-expanded="false"><i></i><i></i><i></i></button></div>
+</div></header>
+
+<main>
+<section class="hero"><div class="w hg">
+ <div>
+  <h1>İşletmenizin dijital dünyadaki yüzünü birlikte tasarlayalım.</h1>
+  <p class="lead">Modern, hızlı ve mobil uyumlu web siteleriyle işletmenizi daha görünür hale getirin ve müşterilerinizin size kolayca ulaşmasını sağlayın.</p>
+  <div class="cta"><a class="btn b1" href="#paketler">Paketleri İncele</a><a class="btn b2" href="#iletisim">Bizimle İletişime Geç</a></div>
+ </div>
+ <div class="mk">
+  <svg class="art" viewBox="0 0 480 440" role="img" aria-label="Web sitesi olan bir işletme vitrini illüstrasyonu">
+   <path class="ar" d="M60 420V210a180 180 0 0 1 360 0v210z"/>
+   <circle class="ro" cx="165" cy="112" r="18"/><circle class="ro" cx="64" cy="236" r="4"/><circle class="bk" cx="430" cy="196" r="5"/>
+   <rect class="bd" x="110" y="224" width="260" height="196"/>
+   <rect class="bk" x="176" y="142" width="128" height="40" rx="8"/><text x="240" y="168" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" font-weight="700" letter-spacing="4" fill="#FFF9F2">MELVA</text>
+   <path class="bk" d="M108 186h44v30a22 22 0 0 1-44 0z"/><path class="aw" d="M152 186h44v30a22 22 0 0 1-44 0z"/><path class="bk" d="M196 186h44v30a22 22 0 0 1-44 0z"/><path class="aw" d="M240 186h44v30a22 22 0 0 1-44 0z"/><path class="bk" d="M284 186h44v30a22 22 0 0 1-44 0z"/><path class="aw" d="M328 186h44v30a22 22 0 0 1-44 0z"/>
+   <rect x="110" y="238" width="260" height="14" fill="rgba(26,10,14,.1)"/><rect class="bk" x="100" y="180" width="280" height="10" rx="5"/><rect class="w" x="130" y="256" width="118" height="96" rx="6"/><rect class="l" x="140" y="318" width="98" height="4" rx="2"/>
+   <rect class="ro" x="150" y="294" width="18" height="24" rx="3"/><rect class="bk" x="180" y="286" width="18" height="32" rx="3"/><rect class="ro" x="210" y="298" width="18" height="20" rx="3"/>
+   <path class="bk" d="M274 420V312a36 36 0 0 1 72 0v108z"/><circle cx="334" cy="372" r="4" fill="#F3E6D5"/>
+   <rect x="290" y="340" width="40" height="20" rx="4" fill="#F3E6D5"/><text x="310" y="354" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#800020">AÇIK</text>
+   <rect class="l" x="40" y="420" width="400" height="6" rx="3"/>
+   <path class="bk" d="M78 420l4-26h20l4 26z"/><ellipse class="ro" cx="84" cy="376" rx="7" ry="18" transform="rotate(-20 84 376)"/><ellipse class="bk" cx="100" cy="374" rx="7" ry="20" transform="rotate(18 100 374)"/>
+   <g class="fl"><rect class="c" x="10" y="124" width="146" height="60" rx="14"/><circle class="ro" cx="40" cy="154" r="16"/><path d="M40 146a6 6 0 0 1 6 6c0 5-6 11-6 11s-6-6-6-11a6 6 0 0 1 6-6z" fill="#FFF9F2"/><circle class="ro" cx="40" cy="152" r="2"/><rect class="bk" x="66" y="144" width="70" height="8" rx="4"/><rect class="l" x="66" y="160" width="50" height="7" rx="3.5"/></g>
+   <g class="fl f2"><rect class="c" x="336" y="238" width="134" height="84" rx="14"/><rect class="s" x="348" y="252" width="84" height="24" rx="10"/><rect class="l" x="358" y="261" width="50" height="6" rx="3"/><rect class="ro" x="370" y="284" width="88" height="24" rx="10"/><rect x="382" y="293" width="54" height="6" rx="3" fill="#1a0a0e" opacity=".55"/></g>
+   <g class="fl f3"><rect class="c" x="322" y="58" width="130" height="46" rx="12"/><text x="387" y="89" text-anchor="middle" font-size="18" letter-spacing="2" fill="#D45060">★★★★★</text></g>
+  </svg>
+ </div>
+</div></section>
+
+<section class="need"><div class="w">
+ <h2>İşletmeniz yalnızca sosyal medyadan ibaret kalmasın.</h2>
+ <p class="lead">Sosyal medya hesabınız vitrininizdir. Web siteniz ise müşterinin güvenle başvurduğu adrestir.</p>
+ <ul class="nd" id="nd"></ul>
+</div></section>
+
+<section id="hizmetler"><div class="w">
+ <h2>Hizmetlerimiz</h2>
+ <p class="lead">İşletmenizin ihtiyacına göre bir araya getirilen, anlaşılır hizmetler.</p>
+ <ul class="ls" id="sv"></ul>
+</div></section>
+
+<section class="pks" id="paketler"><div class="w">
+ <h2>Paketlerimiz</h2>
+ <p class="lead">İşletmenizin büyüklüğüne ve ihtiyacına göre üç paket. Fiyatlar ihtiyaca göre teklif aşamasında netleşir.</p>
+ <div class="pg" id="pg"></div>
+ <p class="note">SSL ve temel güvenlik önlemleri tüm paketlerde standarttır.</p>
+ <h3 class="sub">Ek hizmetler</h3>
+ <ul class="ad" id="ad"></ul>
+</div></section>
+
+<section class="pf" id="portfoy"><div class="w">
+ <h2>Portföy</h2>
+ <p class="lead">Farklı sektörler için hazırlanmış örnek tasarımlar.</p>
+ <div class="ch" id="ch"></div>
+ <div class="pj" id="pj"></div>
+ <p class="pn">Bu çalışmalar örnek tasarımlardır, gerçek müşteri referansı değildir.</p>
+</div></section>
+
+<section><div class="w">
+ <h2>Nasıl çalışıyoruz?</h2>
+ <ol class="st" id="st"></ol>
+</div></section>
+
+<section id="hakkimizda" style="padding-top:0"><div class="w ab">
+ <div><h2>Neden bizi tercih etmelisiniz?</h2><p class="lead">MELVA Web Studio, küçük işletmelerin dijital ihtiyaçlarına odaklanan bir web tasarım ekibidir. Sade, anlaşılır ve işe yarayan siteler hazırlarız.</p></div>
+ <ul class="ls" id="wy"></ul>
+</div></section>
+
+<section class="fq"><div class="w">
+ <h2>Sıkça sorulan sorular</h2>
+ <div id="fq" style="margin-top:36px"></div>
+</div></section>
+
+<section id="iletisim" style="padding-bottom:0"><div class="w"><div class="ct">
+ <div><h2>İşletmeniz için nasıl bir site düşünüyorsunuz?</h2><p class="lead">Instagram’dan veya e-postayla kısaca anlatın, size dönüş yapalım.</p><div class="cta"><a class="btn bh" href="mailto:melvawebstudio@gmail.com">E-posta gönder</a><a class="btn b3" href="https://www.instagram.com/melvawebstudio/" target="_blank" rel="noopener noreferrer">Instagram’dan yazın</a></div></div>
+ <ul class="ci" id="ci"></ul>
+</div></div></section>
+</main>
+
+<footer><div class="w">
+ <div class="fr"><a class="lg" href="#top" aria-label="MELVA Web Studio"><img class="lgl" src="assets/logo-light.png" alt="MELVA Web Studio" width="175" height="40"><img class="lgd" src="assets/logo-dark.png" alt="MELVA Web Studio" width="175" height="40"></a>
+ <ul><li><a href="#hizmetler">Hizmetler</a></li><li><a href="#paketler">Paketler</a></li><li><a href="#portfoy">Portföy</a></li><li><a href="#iletisim">İletişim</a></li><li><a href="https://www.instagram.com/melvawebstudio/" target="_blank" rel="noopener noreferrer">Instagram</a></li></ul></div>
+ <div class="cp"><span>© 2026 MELVA Web Studio. Tüm hakları saklıdır.</span><span><a href="#gizlilik" data-gz>Gizlilik ve Veri Notu</a></span></div>
+</div></footer>
+<dialog id="gz" aria-labelledby="gzt"><div class="dg"><button class="x" aria-label="Kapat" data-x>×</button>
+<h2 id="gzt">Gizlilik ve Veri Notu</h2><p class="up">Son güncelleme: 11 Kasım 2026</p>
+<h3>Veri sorumlusu</h3><p>MELVA Web Studio İletişim: <a href="mailto:melvawebstudio@gmail.com">melvawebstudio@gmail.com</a></p>
+<h3>Bu site neyi toplar?</h3><p>Sitede form, çerez, analiz veya reklam aracı yoktur. Üçüncü taraf yazı tipi ya da betik de yüklenmez. Seçtiğiniz açık/koyu tema yalnızca tarayıcınızda saklanır, bize iletilmez.</p>
+<h3>İletişim bilgileriniz</h3><p>E-posta veya Instagram üzerinden bize yazdığınızda paylaştığınız bilgiler (ad, e-posta adresi, Instagram kullanıcı adı, mesajınız) yalnızca sizinle iletişime geçmek ve talebinizi yanıtlamak için kullanılır. Pazarlama amacıyla kullanılmaz. Yasal yükümlülüklerimiz saklıdır. Saklama süresi: [belirlenecek]. Instagram ve Gmail kendi gizlilik politikalarına tabi üçüncü taraf hizmetlerdir. Bu kanallardan yazdığınızda verileriniz ilgili platform tarafından da işlenir.</p>
+<h3>Barındırma</h3><p>Bu site GitHub Pages üzerinde yayınlanır. Siteyi ziyaret ettiğinizde GitHub, güvenlik amacıyla IP adresinizi kaydeder. Bu kayıtlar GitHub tarafından tutulur, biz bu bilgiyi toplamaz ve kullanmayız. GitHub, Türkiye dışında yerleşik bir hizmet sağlayıcıdır. Ayrıntı için <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages" target="_blank" rel="noopener noreferrer">GitHub Pages açıklamasına</a> bakabilirsiniz.</p>
+<h3>Haklarınız</h3><p>6698 sayılı KVKK’nın 11. maddesi kapsamındaki haklarınız için yukarıdaki e-posta adresinden bize başvurabilirsiniz.</p>
+</div></dialog>
+
+<script>
+/* İÇERİK: tüm metinler, fiyatlar ve iletişim bilgileri burada. Tasarım koduna dokunmadan düzenlenir. */
+const C={
+ contact:[["E-posta","melvawebstudio@gmail.com","mailto:melvawebstudio@gmail.com"],["Instagram","@melvawebstudio","https://www.instagram.com/melvawebstudio/"]],
+ need:[["Profesyonel görünüm ve güven","Müşteriler satın almadan önce araştırır. Düzenli bir site, işletmenizin ciddiyetini ilk saniyede gösterir."],["Google’da daha kolay bulunma","İnsanlar “yakınımdaki cafe” diye arar. Web siteniz karşılarına çıkma şansınızı artırır."],["WhatsApp ile kolay iletişim","Arama yapmak yerine tek dokunuşla mesaj. Soru ve rezervasyon talepleri size daha kolay ulaşır."]],
+ sv:[["Kurumsal web sitesi tasarımı","İşletmenizin kimliğini yansıtan, güven veren özgün tasarım."],["Mobil uyumlu web geliştirme","Telefon, tablet ve bilgisayarda aynı kalitede görünen sayfalar."],["SEO uyumlu web sitesi","Arama sonuçlarında bulunmanızı destekleyen teknik altyapı."],["Ürün ve hizmet katalogları","Sunduklarınızı düzenli ve anlaşılır biçimde sergileyin."],["Dijital menü ve fiyat listeleri","Menünüz ve fiyatlarınız tek bağlantıda, her zaman güncel."],["WhatsApp entegrasyonu","Müşteriniz tek dokunuşla size mesaj gönderir."],["Google Maps entegrasyonu","Konumunuz sitede görünür, yol tarifi tek adımdadır."],["Kampanya ve duyuru sistemleri","İndirim ve duyurularınızı ziyaretçiye öne çıkararak gösterin."],["Görsel galeri ve portföy","Mekânınızı ve çalışmalarınızı etkili biçimde sergileyin."],["Blog ve içerik sistemleri","Yazı ve haberlerle sitenizi canlı tutun."],["İçerik yönetim paneli","İçeriklerinizi kodla uğraşmadan kendiniz güncelleyin."],["Teknik bakım ve güvenlik","Sitenizi güncel ve güvende tutan düzenli bakım."]],
+ fiyat:{}, /* örn. {"Başlangıç":"5.000"} yazılırsa "5.000 TL’den başlayan" görünür */
+ pk:[
+  {n:"Başlangıç",d:"İnternette profesyonel bir işletme profili oluşturmak isteyenler için.",f:["Kurumsal ana sayfa","Hakkımızda","Hizmet tanıtımı","İletişim sayfası","WhatsApp entegrasyonu","Google Maps","Sosyal medya bağlantıları","Mobil uyumluluk","Temel SEO","SSL ve temel güvenlik","İçerik güncellemeleri ajans tarafından yapılır"]},
+  {n:"Profesyonel",hot:1,d:"Daha fazla içerik, ürün ve müşteri etkileşimi isteyen işletmeler için.",f:["Başlangıç paketindeki her şey","Ürün ve hizmet kataloğu","Dijital menü veya fiyat listesi","Görsel galeri","Kampanya ve duyuru sistemi","Teklif talep formu","Blog sistemi","Google Analytics ve Search Console entegrasyonu","Gelişmiş sayfa SEO’su","Müşterinin kullanabileceği içerik yönetim paneli"]},
+  {n:"Premium",d:"Daha kapsamlı içerik ve yönetim ihtiyaçları olan işletmeler için.",f:["Profesyonel paketindeki her şey","Çoklu dil desteği","Çoklu şube desteği","Gelişmiş filtreleme ve arama","Personel ve ekip tanıtım sistemi","Referans ve müşteri yorumları bölümü","Birden fazla yönetici hesabı","Gelişmiş rol ve izin yönetimi","İşlem geçmişi ve denetim kaydı","Detaylı ziyaretçi istatistikleri","Öncelikli teknik destek"]}],
+ ad:[["Aylık içerik güncelleme","Fiyat, menü, görsel ve metin değişikliklerini sizin yerinize yapalım."],["Aylık teknik bakım","Güncellemeler ve güvenlik kontrolleri düzenli olarak yapılır."],["Ek dil kurulumu","Sitenizi ek bir dilde yayınlayın."],["Randevu sistemi","Online randevu altyapısı üzerinde çalışıyoruz.",1]],
+ cats:["Restoran","Güzellik","Otomotiv","Kurumsal"],
+ pj:[["Restoran","Örnek Cafe","#800020","#D45060"],["Güzellik","Örnek Güzellik Merkezi","#9b2740","#D45060"],["Otomotiv","Örnek Oto Yıkama","#5a0016","#800020"],["Kurumsal","Örnek Kurumsal Site","#800020","#b3475a"]],
+ st:[["İhtiyaçlarınızı dinliyoruz","İşletmenizi ve hedeflerinizi birlikte netleştiririz."],["Tasarımı hazırlıyoruz","Sitenizin görünümünü onayınıza sunarız."],["Web sitenizi geliştiriyoruz","Onaylanan tasarımı çalışan siteye dönüştürürüz."],["Test edip yayına alıyoruz","Telefon ve bilgisayarda kontrol eder, yayına alırız."]],
+ wy:[["İşletmenize özel tasarım","Sitenizin kurgusu işletmenizin karakterine göre şekillenir."],["Mobil uyumluluk","Telefondan gelen müşteri düşünülerek tasarlanır."],["Hız ve performans","Hafif sayfalar, hızlı açılış."],["Güvenlik","SSL ve temel güvenlik tüm paketlerde standarttır."],["Açık iletişim","Süreç boyunca ne yapıldığını bilirsiniz."],["Yayın sonrası teknik destek","Site yayına girdikten sonra da yanınızdayız."]],
+ fq:[["Web sitesi ne kadar sürede hazırlanır?","Süre, paketin kapsamına ve içeriklerin hazır olup olmadığına göre değişir. Net takvim teklif aşamasında paylaşılır."],["Paketler arasında ne fark var?","Başlangıç temel işletme profili sunar. Profesyonel katalog, menü, blog ve içerik yönetim paneli ekler. Premium çoklu dil, çoklu şube ve gelişmiş yönetim özelliklerini kapsar."],["Web sitemi kendim güncelleyebilir miyim?","Başlangıç paketinde güncellemeler bizim tarafımızdan yapılır. Profesyonel ve Premium paketlerde içerik yönetim paneli bulunur."],["Domain ve hosting hizmeti dahil mi?","Bu konu teklif aşamasında, ihtiyacınıza göre netleştirilir."],["Yayınlandıktan sonra destek alabilir miyim?","Evet. Aylık içerik güncelleme ve aylık teknik bakım ek hizmet olarak sunulur. Premium pakette öncelikli teknik destek vardır."],["Google’da görünür olabilir miyim?","Siteler SEO uyumlu hazırlanır. Ancak arama sıralaması için kesin bir garanti verilemez."]]
+};
+const $=s=>document.querySelector(s),L=(a,f)=>a.map(f).join("");
+$("#nd").innerHTML=L(C.need,x=>`<li><h3>${x[0]}</h3><p>${x[1]}</p></li>`);
+$("#sv").innerHTML=L(C.sv,x=>`<li><h3>${x[0]}</h3><p>${x[1]}</p></li>`);
+$("#pg").innerHTML=L(C.pk,p=>`<article class="pk${p.hot?" hot":""}">${p.hot?'<span class="tag">Önerilen</span>':""}<h3>${p.n}</h3><p>${p.d}</p><div class="pr">${C.fiyat[p.n]?C.fiyat[p.n]+" TL’den başlayan":"Size özel fiyatlandırma"}</div><a class="btn ${p.hot?"bh":"b1"}" href="#iletisim">Teklif Al</a><ul>${L(p.f,f=>`<li>${f}</li>`)}</ul></article>`);
+$("#ad").innerHTML=L(C.ad,x=>`<li class="${x[2]?"soon":""}">${x[2]?"<small>Yakında</small>":""}<h3>${x[0]}</h3><p>${x[1]}</p></li>`);
+$("#ch").innerHTML=L(["Tümü",...C.cats],(c,i)=>`<button aria-pressed="${i==0}" data-c="${c}">${c}</button>`);
+$("#pj").innerHTML=L(C.pj,x=>`<article class="cd" data-c="${x[0]}"><div class="th" style="--a:${x[2]};--b:${x[3]}"><span>Örnek</span><i></i><i></i><b></b></div><div class="cb"><small>${x[0]}</small><h3>${x[1]}</h3><a href="#iletisim">Projeyi incele</a></div></article>`);
+$("#st").innerHTML=L(C.st,(x,i)=>`<li><b>${i+1}</b><h3 style="font-size:19px;margin-bottom:6px">${x[0]}</h3><p style="color:var(--muted)">${x[1]}</p></li>`);
+$("#wy").innerHTML=L(C.wy,x=>`<li><h3>${x[0]}</h3><p>${x[1]}</p></li>`);
+$("#fq").innerHTML=L(C.fq,x=>`<details><summary>${x[0]}</summary><p>${x[1]}</p></details>`);
+$("#ci").innerHTML=L(C.contact,x=>`<li><small>${x[0]}</small><a href="${x[2]}"${x[2][0]=="h"?' target="_blank" rel="noopener noreferrer"':""}>${x[1]}</a></li>`);
+document.addEventListener("click",e=>{
+ if(e.target.closest("[data-gz]")){e.preventDefault();$("#gz").showModal()}
+ if(e.target.closest("[data-x]")||e.target.id=="gz")$("#gz").close();
+ const b=e.target.closest("#ch button");
+ if(b){document.querySelectorAll("#ch button").forEach(x=>x.setAttribute("aria-pressed",x==b));document.querySelectorAll("#pj .cd").forEach(c=>c.style.display=(b.dataset.c=="Tümü"||c.dataset.c==b.dataset.c)?"":"none")}
+ if(e.target.closest("#mn a")){$("#hd").classList.remove("open");$("#bg").setAttribute("aria-expanded","false")}
+});
+$("#bg").onclick=()=>{const o=$("#hd").classList.toggle("open");$("#bg").setAttribute("aria-expanded",o)};
+$("#tg").onclick=()=>{const R=document.documentElement,d=R.dataset.theme!="dark";R.dataset.theme=d?"dark":"light";try{localStorage.setItem("th",d?"dark":"light")}catch(e){}};
+if(location.hash=="#gizlilik")$("#gz").showModal();
+</script>
+</body>
+</html>
