@@ -15,7 +15,7 @@ html{scroll-behavior:smooth;scroll-padding-top:76px}
 body{font:16px/1.7 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--ivory);color:var(--ink)}
 a{color:inherit;text-decoration:none}ul,ol{list-style:none}
 :focus-visible{outline:3px solid var(--rose);outline-offset:3px}
-.w{max-width:1080px;margin:auto;padding:0 24px}
+.w{max-width:1280px;margin:auto;padding:0 24px}
 section{padding:110px 0}
 h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.14;letter-spacing:-.015em}
 h2{font-size:clamp(30px,4vw,44px);margin-bottom:16px;max-width:660px}
@@ -58,6 +58,7 @@ dialog::backdrop{background:rgba(26,10,14,.6)}
 .dg{padding:32px 28px;max-height:84vh;overflow:auto;position:relative}.dg h2{font-size:28px}.dg .up{color:var(--muted);font-size:14px;margin-bottom:8px}
 .dg h3{font-size:18px;margin:22px 0 6px}.dg p{color:var(--muted)}.dg a{color:var(--wine);text-decoration:underline;text-underline-offset:3px}
 .x{position:absolute;top:14px;right:16px;background:none;border:0;font-size:28px;line-height:1;color:var(--ink);cursor:pointer}
+.ap{display:block;font:400 22px var(--serif);color:var(--wine);margin-top:10px}.nt{display:block;margin-top:6px;font-size:13px;font-weight:600;color:var(--wine)}
 /* need */
 .need{background:var(--sand)}
 .nd{display:grid;grid-template-columns:repeat(3,1fr);margin-top:52px;border-top:1px solid var(--line)}
@@ -69,14 +70,15 @@ dialog::backdrop{background:rgba(26,10,14,.6)}
 .ls h3{font-size:20px;margin-bottom:4px}.ls p{color:var(--muted)}
 /* packages */
 .pks{background:var(--sand)}
-.pg{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px;align-items:start}
-.pk{border:1px solid var(--line);border-radius:10px;padding:36px 30px;background:var(--ivory)}
-.pk h3{font-size:28px;font-weight:400;margin-bottom:8px}.pk>p{color:var(--muted);min-height:78px}
-.pr{font:400 19px var(--serif);margin:18px 0 20px;padding:14px 0;border-block:1px solid var(--line)}
+.pg{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:48px;align-items:start}
+.pk{border:1px solid var(--line);border-radius:10px;padding:34px 28px;background:var(--ivory)}
+.pk h3{font-size:26px;font-weight:400;margin-bottom:8px}.pk>p{color:var(--muted);font-size:15px;min-height:104px}
+.pr small{display:block;font:400 13px system-ui,sans-serif;color:var(--muted);margin-top:2px}.pk.hot .pr small{color:#F3E6D5}
+.pr{font:400 28px/1.2 var(--serif);margin:18px 0 20px;padding:14px 0;min-height:88px;display:flex;flex-direction:column;justify-content:center;border-block:1px solid var(--line)}
 .pk .btn{width:100%;margin-bottom:22px}
 .pk li{padding:6px 0 6px 26px;position:relative;font-size:15px}
 .pk li:before{content:"";position:absolute;left:3px;top:15px;width:11px;height:6px;border-left:2px solid var(--wine);border-bottom:2px solid var(--wine);transform:rotate(-45deg)}
-.pk.hot{background:var(--block);color:#FFF9F2;border-color:var(--block);padding-block:44px}
+.pk.hot{background:var(--block);color:#FFF9F2;border-color:var(--block);padding-block:42px}
 .pk.hot>p{color:#F3E6D5}.pk.hot .pr{border-color:rgba(255,249,242,.25)}.pk.hot li:before{border-color:#F3E6D5}
 .tag{display:inline-block;font:600 13px system-ui;background:#F3E6D5;color:#800020;border-radius:4px;padding:2px 12px;margin-bottom:12px}
 .note{margin-top:24px;color:var(--muted);font-size:15px}
@@ -119,12 +121,14 @@ footer{background:var(--sand);color:var(--muted);padding:44px 0 34px;margin-top:
 .fr{display:flex;justify-content:space-between;gap:28px;flex-wrap:wrap}
 .fr ul{display:flex;gap:22px;flex-wrap:wrap}.fr a:hover{color:var(--wine)}
 .cp{margin-top:28px;padding-top:20px;border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+@media(max-width:1279px){.pg{grid-template-columns:repeat(2,1fr)}.pk>p{min-height:0}.ad{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:700px){.pg{grid-template-columns:1fr}}
 @media(max-width:900px){
  section{padding:72px 0}
  .bg{display:block}.nv ul{display:none;position:absolute;top:68px;left:0;right:0;flex-direction:column;gap:0;background:var(--ivory);border-bottom:1px solid var(--line);padding:8px 24px 16px}
  .nv ul a{display:block;padding:11px 0}.hd.open .nv ul{display:flex}
  .hg,.ab,.ct{grid-template-columns:1fr}.mk{max-width:480px;margin-bottom:34px}
- .nd,.pg,.st{grid-template-columns:1fr}.nd li+li{padding-left:0;border-left:0;border-top:1px solid var(--line);margin-top:28px}
+ .nd,.st{grid-template-columns:1fr}.nd li+li{padding-left:0;border-left:0;border-top:1px solid var(--line);margin-top:28px}
  .ls,.ab .ls{grid-template-columns:1fr}.ad{grid-template-columns:1fr 1fr}.pk>p{min-height:0}.pk.hot{padding-block:36px}
  .ct{padding:36px 26px}
 }
@@ -181,7 +185,7 @@ footer{background:var(--sand);color:var(--muted);padding:44px 0 34px;margin-top:
 
 <section class="pks" id="paketler"><div class="w">
  <h2>Paketlerimiz</h2>
- <p class="lead">İşletmenizin büyüklüğüne ve ihtiyacına göre üç paket. Fiyatlar ihtiyaca göre teklif aşamasında netleşir.</p>
+ <p class="lead">İşletmenizin büyüklüğüne ve ihtiyacına göre dört paket.</p>
  <div class="pg" id="pg"></div>
  <p class="note">SSL ve temel güvenlik önlemleri tüm paketlerde standarttır.</p>
  <h3 class="sub">Ek hizmetler</h3>
@@ -212,7 +216,7 @@ footer{background:var(--sand);color:var(--muted);padding:44px 0 34px;margin-top:
 </div></section>
 
 <section id="iletisim" style="padding-bottom:0"><div class="w"><div class="ct">
- <div><h2>İşletmeniz için nasıl bir site düşünüyorsunuz?</h2><p class="lead">Instagram’dan veya e-postayla kısaca anlatın, size dönüş yapalım.</p><div class="cta"><a class="btn bh" href="mailto:melvawebstudio@gmail.com">E-posta gönder</a><a class="btn b3" href="https://www.instagram.com/melvawebstudio/" target="_blank" rel="noopener noreferrer">Instagram’dan yazın</a></div></div>
+ <div><h2>İşletmeniz için nasıl bir site düşünüyorsunuz?</h2><p class="lead">Instagram’dan veya e-postayla kısaca anlatın, size dönüş yapalım.</p><div class="cta"><a class="btn bh" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=melvawebstudio@gmail.com&amp;su=Web%20sitesi%20talebi" target="_blank" rel="noopener noreferrer">E-posta gönder</a><a class="btn b3" href="https://www.instagram.com/melvawebstudio/" target="_blank" rel="noopener noreferrer">Instagram’dan yazın</a></div></div>
  <ul class="ci" id="ci"></ul>
 </div></div></section>
 </main>
@@ -224,7 +228,7 @@ footer{background:var(--sand);color:var(--muted);padding:44px 0 34px;margin-top:
 </div></footer>
 <dialog id="gz" aria-labelledby="gzt"><div class="dg"><button class="x" aria-label="Kapat" data-x>×</button>
 <h2 id="gzt">Gizlilik ve Veri Notu</h2><p class="up">Son güncelleme: 11 Kasım 2026</p>
-<h3>Veri sorumlusu</h3><p>MELVA Web Studio İletişim: <a href="mailto:melvawebstudio@gmail.com">melvawebstudio@gmail.com</a></p>
+<h3>Veri sorumlusu</h3><p>MELVA Web Studio İletişim: <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=melvawebstudio@gmail.com&amp;su=Web%20sitesi%20talebi" target="_blank" rel="noopener noreferrer">melvawebstudio@gmail.com</a></p>
 <h3>Bu site neyi toplar?</h3><p>Sitede form, çerez, analiz veya reklam aracı yoktur. Üçüncü taraf yazı tipi ya da betik de yüklenmez. Seçtiğiniz açık/koyu tema yalnızca tarayıcınızda saklanır, bize iletilmez.</p>
 <h3>İletişim bilgileriniz</h3><p>E-posta veya Instagram üzerinden bize yazdığınızda paylaştığınız bilgiler (ad, e-posta adresi, Instagram kullanıcı adı, mesajınız) yalnızca sizinle iletişime geçmek ve talebinizi yanıtlamak için kullanılır. Pazarlama amacıyla kullanılmaz. Yasal yükümlülüklerimiz saklıdır. Saklama süresi: [belirlenecek]. Instagram ve Gmail kendi gizlilik politikalarına tabi üçüncü taraf hizmetlerdir. Bu kanallardan yazdığınızda verileriniz ilgili platform tarafından da işlenir.</p>
 <h3>Barındırma</h3><p>Bu site GitHub Pages üzerinde yayınlanır. Siteyi ziyaret ettiğinizde GitHub, güvenlik amacıyla IP adresinizi kaydeder. Bu kayıtlar GitHub tarafından tutulur, biz bu bilgiyi toplamaz ve kullanmayız. GitHub, Türkiye dışında yerleşik bir hizmet sağlayıcıdır. Ayrıntı için <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages" target="_blank" rel="noopener noreferrer">GitHub Pages açıklamasına</a> bakabilirsiniz.</p>
@@ -234,26 +238,27 @@ footer{background:var(--sand);color:var(--muted);padding:44px 0 34px;margin-top:
 <script>
 /* İÇERİK: tüm metinler, fiyatlar ve iletişim bilgileri burada. Tasarım koduna dokunmadan düzenlenir. */
 const C={
- contact:[["E-posta","melvawebstudio@gmail.com","mailto:melvawebstudio@gmail.com"],["Instagram","@melvawebstudio","https://www.instagram.com/melvawebstudio/"]],
+ contact:[["E-posta","melvawebstudio@gmail.com","https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=melvawebstudio@gmail.com&amp;su=Web%20sitesi%20talebi"],["Instagram","@melvawebstudio","https://www.instagram.com/melvawebstudio/"]],
  need:[["Profesyonel görünüm ve güven","Müşteriler satın almadan önce araştırır. Düzenli bir site, işletmenizin ciddiyetini ilk saniyede gösterir."],["Google’da daha kolay bulunma","İnsanlar “yakınımdaki cafe” diye arar. Web siteniz karşılarına çıkma şansınızı artırır."],["WhatsApp ile kolay iletişim","Arama yapmak yerine tek dokunuşla mesaj. Soru ve rezervasyon talepleri size daha kolay ulaşır."]],
- sv:[["Kurumsal web sitesi tasarımı","İşletmenizin kimliğini yansıtan, güven veren özgün tasarım."],["Mobil uyumlu web geliştirme","Telefon, tablet ve bilgisayarda aynı kalitede görünen sayfalar."],["SEO uyumlu web sitesi","Arama sonuçlarında bulunmanızı destekleyen teknik altyapı."],["Ürün ve hizmet katalogları","Sunduklarınızı düzenli ve anlaşılır biçimde sergileyin."],["Dijital menü ve fiyat listeleri","Menünüz ve fiyatlarınız tek bağlantıda, her zaman güncel."],["WhatsApp entegrasyonu","Müşteriniz tek dokunuşla size mesaj gönderir."],["Google Maps entegrasyonu","Konumunuz sitede görünür, yol tarifi tek adımdadır."],["Kampanya ve duyuru sistemleri","İndirim ve duyurularınızı ziyaretçiye öne çıkararak gösterin."],["Görsel galeri ve portföy","Mekânınızı ve çalışmalarınızı etkili biçimde sergileyin."],["Blog ve içerik sistemleri","Yazı ve haberlerle sitenizi canlı tutun."],["İçerik yönetim paneli","İçeriklerinizi kodla uğraşmadan kendiniz güncelleyin."],["Teknik bakım ve güvenlik","Sitenizi güncel ve güvende tutan düzenli bakım."]],
- fiyat:{}, /* örn. {"Başlangıç":"5.000"} yazılırsa "5.000 TL’den başlayan" görünür */
+ sv:[["Kurumsal web sitesi tasarımı","İşletmenizin kimliğini yansıtan, güven veren özgün tasarım."],["Mobil uyumlu web geliştirme","Telefon, tablet ve bilgisayarda aynı kalitede görünen sayfalar."],["SEO uyumlu web sitesi","Arama sonuçlarında bulunmanızı destekleyen teknik altyapı."],["Ürün ve hizmet katalogları","Sunduklarınızı düzenli ve anlaşılır biçimde sergileyin."],["Dijital menü ve fiyat listeleri","Menünüz ve fiyatlarınız tek bağlantıda, her zaman güncel."],["WhatsApp entegrasyonu","Müşteriniz tek dokunuşla size mesaj gönderir."],["Google Maps entegrasyonu","Konumunuz sitede görünür, yol tarifi tek adımdadır."],["Kampanya ve duyuru sistemleri","İndirim ve duyurularınızı ziyaretçiye öne çıkararak gösterin."],["Görsel galeri ve portföy","Mekânınızı ve çalışmalarınızı etkili biçimde sergileyin."],["Blog ve içerik sistemleri","Yazı ve haberlerle sitenizi canlı tutun."],["İçerik yönetim paneli","İçeriklerinizi kodla uğraşmadan kendiniz güncelleyin."],["Güvenlik ve teknik düzenleme","SSL ve temel güvenlik her pakette standarttır. Sonradan gereken teknik düzeltmeleri de yapıyoruz."]],
+ fiyat:{"Tanıtım":"4.999","Başlangıç":"9.999","Profesyonel":"15.999","Premium":"24.999"}, fb:["Tanıtım"], /* fb: fiyatın altında "’den başlayan" yazacak paketler */
  pk:[
-  {n:"Başlangıç",d:"İnternette profesyonel bir işletme profili oluşturmak isteyenler için.",f:["Kurumsal ana sayfa","Hakkımızda","Hizmet tanıtımı","İletişim sayfası","WhatsApp entegrasyonu","Google Maps","Sosyal medya bağlantıları","Mobil uyumluluk","Temel SEO","SSL ve temel güvenlik","İçerik güncellemeleri ajans tarafından yapılır"]},
+  {n:"Tanıtım",d:"Basit bir tanıtım sitesiyle internette görünür olmak isteyenler için.",f:["Hizmet tanıtımı","Sosyal medya bağlantıları","Mobil uyumluluk","Temel SEO","SSL ve temel güvenlik","İçerik güncellemeleri ek hizmetlere tabidir"]},
+  {n:"Başlangıç",d:"İnternette profesyonel bir işletme profili oluşturmak isteyenler için.",f:["Kurumsal ana sayfa","Hakkımızda","Hizmet tanıtımı","İletişim sayfası","WhatsApp entegrasyonu","Google Maps","Sosyal medya bağlantıları","Mobil uyumluluk","Temel SEO","SSL ve temel güvenlik","İçerik güncellemeleri ek hizmetlere tabidir"]},
   {n:"Profesyonel",hot:1,d:"Daha fazla içerik, ürün ve müşteri etkileşimi isteyen işletmeler için.",f:["Başlangıç paketindeki her şey","Ürün ve hizmet kataloğu","Dijital menü veya fiyat listesi","Görsel galeri","Kampanya ve duyuru sistemi","Teklif talep formu","Blog sistemi","Google Analytics ve Search Console entegrasyonu","Gelişmiş sayfa SEO’su","Müşterinin kullanabileceği içerik yönetim paneli"]},
   {n:"Premium",d:"Daha kapsamlı içerik ve yönetim ihtiyaçları olan işletmeler için.",f:["Profesyonel paketindeki her şey","Çoklu dil desteği","Çoklu şube desteği","Gelişmiş filtreleme ve arama","Personel ve ekip tanıtım sistemi","Referans ve müşteri yorumları bölümü","Birden fazla yönetici hesabı","Gelişmiş rol ve izin yönetimi","İşlem geçmişi ve denetim kaydı","Detaylı ziyaretçi istatistikleri","Öncelikli teknik destek"]}],
- ad:[["Aylık içerik güncelleme","Fiyat, menü, görsel ve metin değişikliklerini sizin yerinize yapalım."],["Aylık teknik bakım","Güncellemeler ve güvenlik kontrolleri düzenli olarak yapılır."],["Ek dil kurulumu","Sitenizi ek bir dilde yayınlayın."],["Randevu sistemi","Online randevu altyapısı üzerinde çalışıyoruz.",1]],
+ ad:[["İçerik güncelleme","Fiyat güncelleme, ürün ekleme veya çıkarma ve benzeri içerik işleri.","499 TL"],["Teknik düzenleme","Sitenin belirli bölümlerinin, butonlarının veya temasının düzeltilmesi gibi yapısal değişiklikler.","3.499 TL",0,"+ 1 kez ücretsiz içerik güncellemesi"],["Ek dil kurulumu","Sitenizi ek bir dilde yayınlayın.","499 TL"],["Randevu sistemi","Online randevu altyapısı üzerinde çalışıyoruz.","",1]],
  cats:["Restoran","Güzellik","Otomotiv","Kurumsal"],
  pj:[["Restoran","Örnek Cafe","#800020","#D45060"],["Güzellik","Örnek Güzellik Merkezi","#9b2740","#D45060"],["Otomotiv","Örnek Oto Yıkama","#5a0016","#800020"],["Kurumsal","Örnek Kurumsal Site","#800020","#b3475a"]],
  st:[["İhtiyaçlarınızı dinliyoruz","İşletmenizi ve hedeflerinizi birlikte netleştiririz."],["Tasarımı hazırlıyoruz","Sitenizin görünümünü onayınıza sunarız."],["Web sitenizi geliştiriyoruz","Onaylanan tasarımı çalışan siteye dönüştürürüz."],["Test edip yayına alıyoruz","Telefon ve bilgisayarda kontrol eder, yayına alırız."]],
  wy:[["İşletmenize özel tasarım","Sitenizin kurgusu işletmenizin karakterine göre şekillenir."],["Mobil uyumluluk","Telefondan gelen müşteri düşünülerek tasarlanır."],["Hız ve performans","Hafif sayfalar, hızlı açılış."],["Güvenlik","SSL ve temel güvenlik tüm paketlerde standarttır."],["Açık iletişim","Süreç boyunca ne yapıldığını bilirsiniz."],["Yayın sonrası teknik destek","Site yayına girdikten sonra da yanınızdayız."]],
- fq:[["Web sitesi ne kadar sürede hazırlanır?","Süre, paketin kapsamına ve içeriklerin hazır olup olmadığına göre değişir. Net takvim teklif aşamasında paylaşılır."],["Paketler arasında ne fark var?","Başlangıç temel işletme profili sunar. Profesyonel katalog, menü, blog ve içerik yönetim paneli ekler. Premium çoklu dil, çoklu şube ve gelişmiş yönetim özelliklerini kapsar."],["Web sitemi kendim güncelleyebilir miyim?","Başlangıç paketinde güncellemeler bizim tarafımızdan yapılır. Profesyonel ve Premium paketlerde içerik yönetim paneli bulunur."],["Domain ve hosting hizmeti dahil mi?","Bu konu teklif aşamasında, ihtiyacınıza göre netleştirilir."],["Yayınlandıktan sonra destek alabilir miyim?","Evet. Aylık içerik güncelleme ve aylık teknik bakım ek hizmet olarak sunulur. Premium pakette öncelikli teknik destek vardır."],["Google’da görünür olabilir miyim?","Siteler SEO uyumlu hazırlanır. Ancak arama sıralaması için kesin bir garanti verilemez."]]
+ fq:[["Web sitesi ne kadar sürede hazırlanır?","Süre, paketin kapsamına ve içeriklerin hazır olup olmadığına göre değişir. Net takvim teklif aşamasında paylaşılır."],["Paketler arasında ne fark var?","Tanıtım, hizmetlerinizi basit bir şekilde tanıtan en sade pakettir. Başlangıç temel işletme profili sunar. Profesyonel katalog, menü, blog ve içerik yönetim paneli ekler. Premium çoklu dil, çoklu şube ve gelişmiş yönetim özelliklerini kapsar."],["Web sitemi kendim güncelleyebilir miyim?","Tanıtım ve Başlangıç paketlerinde içerik güncellemeleri ek hizmetlere tabidir ve bizim tarafımızdan yapılır. Profesyonel ve Premium paketlerde içerik yönetim paneli bulunur."],["İçerik güncelleme ile teknik düzenleme arasındaki fark nedir?","İçerik güncelleme; fiyat değişikliği, ürün ekleme veya çıkarma gibi içerik işlerini kapsar. Teknik düzenleme; sitenin belirli bölümlerinin, butonlarının veya temasının düzeltilmesi gibi yapısal değişiklikleri kapsar."],["Domain ve hosting hizmeti dahil mi?","Bu konu teklif aşamasında, ihtiyacınıza göre netleştirilir."],["Yayınlandıktan sonra destek alabilir miyim?","Evet. İçerik güncelleme ve teknik düzenleme ek hizmet olarak sunulur. Premium pakette öncelikli teknik destek vardır."],["Google’da görünür olabilir miyim?","Siteler SEO uyumlu hazırlanır. Ancak arama sıralaması için kesin bir garanti verilemez."]]
 };
 const $=s=>document.querySelector(s),L=(a,f)=>a.map(f).join("");
 $("#nd").innerHTML=L(C.need,x=>`<li><h3>${x[0]}</h3><p>${x[1]}</p></li>`);
 $("#sv").innerHTML=L(C.sv,x=>`<li><h3>${x[0]}</h3><p>${x[1]}</p></li>`);
-$("#pg").innerHTML=L(C.pk,p=>`<article class="pk${p.hot?" hot":""}">${p.hot?'<span class="tag">Önerilen</span>':""}<h3>${p.n}</h3><p>${p.d}</p><div class="pr">${C.fiyat[p.n]?C.fiyat[p.n]+" TL’den başlayan":"Size özel fiyatlandırma"}</div><a class="btn ${p.hot?"bh":"b1"}" href="#iletisim">Teklif Al</a><ul>${L(p.f,f=>`<li>${f}</li>`)}</ul></article>`);
-$("#ad").innerHTML=L(C.ad,x=>`<li class="${x[2]?"soon":""}">${x[2]?"<small>Yakında</small>":""}<h3>${x[0]}</h3><p>${x[1]}</p></li>`);
+$("#pg").innerHTML=L(C.pk,p=>`<article class="pk${p.hot?" hot":""}">${p.hot?'<span class="tag">Önerilen</span>':""}<h3>${p.n}</h3><p>${p.d}</p><div class="pr">${C.fiyat[p.n]?C.fiyat[p.n]+" TL"+(C.fb.includes(p.n)?"<small>’den başlayan</small>":""):"Size özel fiyatlandırma"}</div><a class="btn ${p.hot?"bh":"b1"}" href="#iletisim">Teklif Al</a><ul>${L(p.f,f=>`<li>${f}</li>`)}</ul></article>`);
+$("#ad").innerHTML=L(C.ad,x=>`<li class="${x[3]?"soon":""}">${x[3]?"<small>Yakında</small>":""}<h3>${x[0]}</h3><p>${x[1]}</p>${x[2]?`<b class="ap">${x[2]}</b>`:""}${x[4]?`<span class="nt">${x[4]}</span>`:""}</li>`);
 $("#ch").innerHTML=L(["Tümü",...C.cats],(c,i)=>`<button aria-pressed="${i==0}" data-c="${c}">${c}</button>`);
 $("#pj").innerHTML=L(C.pj,x=>`<article class="cd" data-c="${x[0]}"><div class="th" style="--a:${x[2]};--b:${x[3]}"><span>Örnek</span><i></i><i></i><b></b></div><div class="cb"><small>${x[0]}</small><h3>${x[1]}</h3><a href="#iletisim">Projeyi incele</a></div></article>`);
 $("#st").innerHTML=L(C.st,(x,i)=>`<li><b>${i+1}</b><h3 style="font-size:19px;margin-bottom:6px">${x[0]}</h3><p style="color:var(--muted)">${x[1]}</p></li>`);
